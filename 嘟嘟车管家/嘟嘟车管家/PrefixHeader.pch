@@ -1,0 +1,97 @@
+//
+//  PrefixHeader.pch
+//  嘟嘟车管家
+//
+//  Created by joinus on 15/10/12.
+//  Copyright (c) 2015年 soulnear. All rights reserved.
+//
+
+#ifndef ______PrefixHeader_pch
+#define ______PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#pragma mark --------  g公共类
+#import "UIView+Frame.h"
+#import "UIImageView+WebCache.h"
+#import "MBProgressHUD.h"
+#import "SNRefreshTableView.h"
+#import "AFHTTPRequestOperation.h"
+#import "AFHTTPRequestOperationManager.h"
+#import "ZTools.h"
+#import "ZAPI.h"
+#import "DefaultConstant.h"
+#import "FinalStarRatingBar.h"
+#import "CityInfo.h"
+#import "MagicalRecord.h"
+#import "DJWStarRatingView.h"
+#import "SShareView.h"
+#import "LogInViewController.h"
+#import "SDDTitleLineView.h"
+
+//友盟
+#import "MobClick.h"
+#import "UMessage.h"
+#import "UMSocialControllerService.h"
+#import "UMFeedback.h"
+#import "UMSocial.h"
+#import "UMSocialData.h"
+#import "UMSocialControllerService.h"
+#import "UMSocialWechatHandler.h"
+#import "UMSocialQQHandler.h"
+#import "UMSocialSinaHandler.h"
+
+///高德地图
+#import <MAMapKit/MAMapKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
+
+
+//颜色
+
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f \
+alpha:(a)]
+
+//判断屏幕长度
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#pragma mark - 屏幕宽度
+///屏幕宽度
+#define DEVICE_WIDTH  [UIScreen mainScreen].bounds.size.width
+#pragma mark - 屏幕高度
+///屏幕高度
+#define DEVICE_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+
+#pragma mark - 图片
+#define NAVIGATION_IMAGE [UIImage imageNamed:@"navigation_image"]
+#define BACKGROUND_IMAGE [UIImage imageName:@"background_image.jpg"]
+
+//加载默认图图片
+#define DEFAULT_LOADING_IMAGE_4_3 [UIImage imageNamed:@"homepage_comment_listitem_imgbg"]
+#define DEFAULT_LOADING_SMALL_IMAGE @"default_loading_small_image"
+
+//蓝色背景
+#define DEFAULT_BACKGROUND_COLOR RGBCOLOR(70,161,255)
+//黄色背景
+#define DEFAULT_YELLOW_COLOR RGBCOLOR(255,201,70)
+//灰色背景
+#define DEFAULT_LINE_COLOR RGBCOLOR(167,167,167)
+#define CURRENT_BUILD [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
+#define CURRENT_VERSION [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleShortVersionString"]
+///灰色背景图RGB
+#define DEFAULT_GRAY_BACKGROUND_COLOR RGBCOLOR(242,242,242) 
+///默认黑色字体
+#define DEFAULT_BLACK_TEXT_COLOR RGBCOLOR(3,3,3)
+///默认灰色字体
+#define DEFAULT_GRAY_TEXT_COLOR RGBCOLOR(167,167,167)
+
+#pragma mark -----   数据请求返回值参数
+#define ERROR_CODE @"status"
+#define ERROR_INFO @"message"
+
+#define ERROR_FOR_NETWORK @"加载失败，请检查当前网络状况"
+
+#endif
